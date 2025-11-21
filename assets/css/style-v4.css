@@ -2090,7 +2090,7 @@ input.main-search-input::placeholder {
 
 .btn-one {
   padding: 15px 25px;
-  background: #34669E !important;
+  background: var(--gradient-bg);
   font-weight: 600;
   color: var(--white);
   transition: var(--transition);
@@ -3470,7 +3470,7 @@ input.main-search-input::placeholder {
 }
 .about__shape img {
   width: 100%;
-  animation: none;
+  animation: sway_Y 5s linear infinite alternate;
 }
 .about__left-item, .about-two__left-item {
   position: relative;
@@ -3552,7 +3552,7 @@ input.main-search-input::placeholder {
   right: unset;
   left: -32%;
   top: 12%;
-  animation: none;
+  animation: rotate 5s linear infinite;
 }
 .about-two__left-item .dots {
   position: absolute;
@@ -4032,7 +4032,6 @@ input.main-search-input::placeholder {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background-color: #110792 !important;
 }
 .offer__shadow {
   position: absolute;
@@ -4116,13 +4115,10 @@ input.main-search-input::placeholder {
 
 .brand__wrp {
   padding: 65px;
-  background: #f2f2f2 !important;
+  background: var(--gradient-bg);
   margin-top: -85px;
   position: relative;
   z-index: 1;
-  border: 2px solid #d0d0d0;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 991px) {
   .brand__wrp {
@@ -4243,7 +4239,7 @@ input.main-search-input::placeholder {
   content: "";
   border-radius: 50%;
   position: absolute;
-  animation: none;
+  animation: rotate 20s linear infinite;
 }
 .process__image .process-number {
   width: 40px;
@@ -4907,7 +4903,7 @@ input.main-search-input::placeholder {
   transition: 1s;
 }
 .pricing__item:hover .item-shape {
-  animation: none;
+  animation: bobble 2s ease-in-out infinite alternate;
 }
 .pricing__item:hover .pricing-icon img {
   transform: rotateY(-360deg);
@@ -5132,7 +5128,7 @@ input.main-search-input::placeholder {
   left: 50%;
   bottom: 0;
   transform: translate(-50%);
-  animation: none;
+  animation: footer__shadow 10s linear infinite alternate;
 }
 .footer__item {
   padding-top: 0;
@@ -5243,7 +5239,7 @@ h3.footer-title {
   }
 }
 .sway__animation {
-  animation: none;
+  animation: sway 3s linear infinite alternate;
 }
 
 @keyframes swayX {
@@ -5255,7 +5251,7 @@ h3.footer-title {
   }
 }
 .sway__animationX {
-  animation: none;
+  animation: swayX 3s linear infinite alternate;
 }
 
 @keyframes footer__shadow {
@@ -5275,7 +5271,7 @@ h3.footer-title {
   }
 }
 .sway_Y__animation {
-  animation: none;
+  animation: sway_Y 3s linear infinite alternate;
 }
 
 @keyframes sway_YY {
@@ -5287,7 +5283,7 @@ h3.footer-title {
   }
 }
 .sway_Y__animationY {
-  animation: none;
+  animation: sway_YY 3s linear infinite alternate;
 }
 
 @keyframes rotate {
@@ -5299,7 +5295,7 @@ h3.footer-title {
   }
 }
 .animation__rotate {
-  animation: none;
+  animation: rotate 40s linear infinite;
 }
 
 @keyframes rotateY {
@@ -5311,7 +5307,7 @@ h3.footer-title {
   }
 }
 .animation__rotateY {
-  animation: none;
+  animation: rotateY 40s linear infinite;
 }
 
 @keyframes bobble {

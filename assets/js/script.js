@@ -84,7 +84,7 @@ CSS TABLE OF CONTENTS
 	// Menu Fixed
 	var fixed_top = $(".header-area");
 	$(window).on("scroll", function () {
-		if ($(this).scrollTop() > 300) {
+		if ($(this).scrollTop() > 50) {
 			fixed_top.addClass("menu-fixed animated fadeInDown");
 		} else {
 			fixed_top.removeClass("menu-fixed fadeInDown");
@@ -151,14 +151,11 @@ CSS TABLE OF CONTENTS
 	// Banner Two slider area end here ***
 	var sliderActive1 = ".banner__slider";
 	var sliderInit1 = new Swiper(sliderActive1, {
-		loop: true,
+		loop: false,
 		slidesPerView: 1,
 		effect: "fade",
 		speed: 3000,
-		autoplay: {
-			delay: 7000,
-			disableOnInteraction: false,
-		},
+		autoplay: false,
 		pagination: {
 			el: ".banner__dot",
 			clickable: true,
@@ -166,30 +163,35 @@ CSS TABLE OF CONTENTS
 	});
 	// Here this is use for animate ***
 	function animated_swiper(selector, init) {
+		var hasAnimated = false;
 		var animated = function animated() {
-			$(selector + " [data-animation]").each(function () {
-				var anim = $(this).data("animation");
-				var delay = $(this).data("delay");
-				var duration = $(this).data("duration");
-				$(this)
-					.removeClass("anim" + anim)
-					.addClass(anim + " animated")
-					.css({
-						webkitAnimationDelay: delay,
-						animationDelay: delay,
-						webkitAnimationDuration: duration,
-						animationDuration: duration,
-					})
-					.one("animationend", function () {
-						$(this).removeClass(anim + " animated");
-					});
-			});
+			if (!hasAnimated) {
+				$(selector + " [data-animation]").each(function () {
+					var anim = $(this).data("animation");
+					var delay = $(this).data("delay");
+					var duration = $(this).data("duration");
+					$(this)
+						.removeClass("anim" + anim)
+						.addClass(anim + " animated")
+						.css({
+							webkitAnimationDelay: delay,
+							animationDelay: delay,
+							webkitAnimationDuration: duration,
+							animationDuration: duration,
+						})
+						.one("animationend", function () {
+							$(this).removeClass(anim + " animated");
+							$(this).css({
+								opacity: '1',
+								visibility: 'visible'
+							});
+						});
+				});
+				hasAnimated = true;
+			}
 		};
 		animated();
-		init.on("slideChange", function () {
-			$(sliderActive1 + " [data-animation]").removeClass("animated");
-		});
-		init.on("slideChange", animated);
+		// Animasyon sadece bir kere çalışacak, slideChange olayını kaldırdık
 	}
 	animated_swiper(sliderActive1, sliderInit1);
 	// Banner Two slider area end here ***
