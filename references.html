@@ -143,38 +143,185 @@
                         MÜŞTERİLERİMİZ
                     </h5>
                     <h2 style="color: var(--heading-color); font-weight: 700; font-size: 42px;">
-                        Üye işyerlerimizi teknolojik çözümlerimize<br>
-                        en kolay ve en hızlı şekilde ulaştırıyoruz
+                        İşletmelere teknolojik çözümler sunarak<br>
+                        dijital dönüşüm süreçlerine katkı sağlıyoruz
                     </h2>
+                    <div class="mt-4 mb-3">
+                        <p style="color: #6c757d; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <i class="fa-solid fa-circle-info" style="color: #110792;"></i>
+                            <span>Proje detaylarını görüntülemek için firma logolarına tıklayabilirsiniz</span>
+                        </p>
+                    </div>
                 </div>
                 
-                <div class="row g-4 justify-content-center">
-                    <!-- Logo Item -->
+                <!-- Logo Grid -->
+                <div class="row g-4 justify-content-center mb-5">
+                    <!-- Logo Item 1 -->
                     <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="brand-logo-box">
-                            <img src="photo/references/logo2.webp" alt="Client Logo">
+                        <div class="brand-logo-box" style="cursor: pointer; transition: all 0.3s ease; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" 
+                             onclick="toggleAccordion('project1')" 
+                             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 5px 20px rgba(17,7,146,0.2)'" 
+                             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.1)'">
+                            <img src="photo/references/logo2.webp" alt="OtoQom" style="width: 100%; height: auto;">
                         </div>
                     </div>
+                    <!-- Logo Item 2 -->
                     <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="brand-logo-box">
-                            <img src="photo/references/MetLife_logo.svg.png" alt="Client Logo">
+                        <div class="brand-logo-box" style="cursor: pointer; transition: all 0.3s ease; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" 
+                             onclick="toggleAccordion('project2')"
+                             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 5px 20px rgba(17,7,146,0.2)'" 
+                             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.1)'">
+                            <img src="photo/references/MetLife_logo.svg.png" alt="MetLife" style="width: 100%; height: auto;">
                         </div>
                     </div>
+                    <!-- Logo Item 3 -->
                     <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="brand-logo-box">
-                            <img src="photo/references/Coca-Cola_İçecek_logo.png" alt="Client Logo">
+                        <div class="brand-logo-box" style="cursor: pointer; transition: all 0.3s ease; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" 
+                             onclick="toggleAccordion('project3')"
+                             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 5px 20px rgba(17,7,146,0.2)'" 
+                             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.1)'">
+                            <img src="photo/references/Coca-Cola_İçecek_logo.png" alt="Coca-Cola İçecek" style="width: 100%; height: auto;">
                         </div>
                     </div>
+                    <!-- Logo Item 4 -->
                     <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <div class="brand-logo-box">
-                            <img src="photo/references/Turkcell_logo.png" alt="Client Logo">
+                        <div class="brand-logo-box" style="cursor: pointer; transition: all 0.3s ease; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" 
+                             onclick="toggleAccordion('project4')"
+                             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 5px 20px rgba(17,7,146,0.2)'" 
+                             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.1)'">
+                            <img src="photo/references/Turkcell_logo.png" alt="Turkcell" style="width: 100%; height: auto;">
                         </div>
                     </div>
                 </div>
+
+                <!-- Project Details Accordion -->
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-10">
+                        <!-- Project 1 Details -->
+                        <div id="project1" class="project-accordion" style="display: none; background: white; border-radius: 15px; padding: 40px; margin-bottom: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); animation: fadeIn 0.3s ease;">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h3 style="color: #110792; font-weight: 700;">Otocom Projesi</h3>
+                                <button onclick="toggleAccordion('project1')" style="background: none; border: none; font-size: 24px; color: #110792; cursor: pointer;">&times;</button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 style="color: #110792; margin-bottom: 15px;">Proje Detayları</h5>
+                                    <p><strong>Hizmet:</strong> Web Geliştirme & Mobil Uygulama</p>
+                                    <p><strong>Teknolojiler:</strong> React, Node.js, React Native</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 style="color: #110792; margin-bottom: 15px;">Proje Özeti</h5>
+                                    <p>Otocom için kapsamlı bir dijital platform geliştirdik. E-ticaret altyapısı, mobil uygulama ve ödeme sistemleri entegrasyonu ile modern bir çözüm sunduk.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 Details -->
+                        <div id="project2" class="project-accordion" style="display: none; background: white; border-radius: 15px; padding: 40px; margin-bottom: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); animation: fadeIn 0.3s ease;">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h3 style="color: #110792; font-weight: 700;">MetLife Projesi</h3>
+                                <button onclick="toggleAccordion('project2')" style="background: none; border: none; font-size: 24px; color: #110792; cursor: pointer;">&times;</button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 style="color: #110792; margin-bottom: 15px;">Proje Detayları</h5>
+                                    <p><strong>Hizmet:</strong> İş Zekası & Veri Analitği</p>
+                                    <p><strong>Teknolojiler:</strong> Power BI, SQL Server, Azure</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 style="color: #110792; margin-bottom: 15px;">Proje Özeti</h5>
+                                    <p>MetLife için kurumsal veri analitik platformu oluşturduk. İnteraktif dashboard'lar ve raporlama sistemleri ile karar verme süreçlerine destek sağladık.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 Details -->
+                        <div id="project3" class="project-accordion" style="display: none; background: white; border-radius: 15px; padding: 40px; margin-bottom: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); animation: fadeIn 0.3s ease;">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h3 style="color: #110792; font-weight: 700;">Coca-Cola İçecek Projesi</h3>
+                                <button onclick="toggleAccordion('project3')" style="background: none; border: none; font-size: 24px; color: #110792; cursor: pointer;">&times;</button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 style="color: #110792; margin-bottom: 15px;">Proje Detayları</h5>
+                                    <p><strong>Hizmet:</strong> IT Altyapı & DevOps</p>
+                                    <p><strong>Teknolojiler:</strong> Kubernetes, Docker, AWS</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 style="color: #110792; margin-bottom: 15px;">Proje Özeti</h5>
+                                    <p>Coca-Cola İçecek için modern IT altyapı çözümleri geliştirdik. Container orchestration ve CI/CD pipeline'ları ile operasyonel verimliliği artırdık.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 Details -->
+                        <div id="project4" class="project-accordion" style="display: none; background: white; border-radius: 15px; padding: 40px; margin-bottom: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); animation: fadeIn 0.3s ease;">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h3 style="color: #110792; font-weight: 700;">Turkcell Projesi</h3>
+                                <button onclick="toggleAccordion('project4')" style="background: none; border: none; font-size: 24px; color: #110792; cursor: pointer;">&times;</button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 style="color: #110792; margin-bottom: 15px;">Proje Detayları</h5>
+                                    <p><strong>Hizmet:</strong> Veri Mühendisliği</p>
+                                    <p><strong>Teknolojiler:</strong> Apache Spark, Kafka, Hadoop</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 style="color: #110792; margin-bottom: 15px;">Proje Özeti</h5>
+                                    <p>Turkcell için büyük veri işleme altyapısı kurduk. Real-time data streaming ve ETL pipeline'ları ile veri yönetim sistemlerini modernize ettik.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- References area end here -->
+        
+        <style>
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .project-accordion {
+                animation: fadeIn 0.3s ease;
+            }
+            
+            .brand-logo-box:hover {
+                transform: translateY(-5px);
+            }
+        </style>
+        
+        <script>
+            function toggleAccordion(projectId) {
+                // Tüm accordion'ları kapat
+                const allAccordions = document.querySelectorAll('.project-accordion');
+                allAccordions.forEach(accordion => {
+                    if (accordion.id !== projectId) {
+                        accordion.style.display = 'none';
+                    }
+                });
+                
+                // Tıklanan accordion'u aç/kapat
+                const targetAccordion = document.getElementById(projectId);
+                if (targetAccordion.style.display === 'none' || targetAccordion.style.display === '') {
+                    targetAccordion.style.display = 'block';
+                    // Smooth scroll to accordion
+                    setTimeout(() => {
+                        targetAccordion.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 100);
+                } else {
+                    targetAccordion.style.display = 'none';
+                }
+            }
+        </script>
     </main>
 
     <!-- Footer area start here -->
